@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Selector</title>
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <!-- favicon standar -->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+    <!-- favicon ukuran kecil -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png" />
+
+    <!-- apple touch icon untuk iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+
+    <!-- android/chrome manifest -->
+    <link rel="manifest" href="/static/site.webmanifest" />
+</head>
+<body>
+    <h2>Masukkan Data</h2>
+    <form hx-post="/predict"
+          hx-target="#result"
+          hx-swap="innerHTML">
+        
+        <label>Name (nullable):</label>
+        <input type="text" name="name"><br><br>
+
+        <label>Gender:</label>
+        <select name="gender">
+            {% for gender in genders %}
+            <option value="{{ gender }}">{{ gender }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Age:</label>
+        <input type="number" value="{{ default_age }}" name="age" min="1" max="100" required><br><br>
+
+        <label>Course:</label>
+        <select name="course">
+            {% for course in courses %}
+            <option value="{{ course }}">{{ course }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Year:</label>
+        <select name="year">
+            {% for year in years %}
+            <option value="{{ year }}">{{ year }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>CGPA:</label>
+        <select name="cgpa">
+            {% for cgpa in cgpas %}
+            <option value="{{ cgpa }}">{{ cgpa }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Marital status:</label>
+        <select name="marital">
+            {% for marital in maritals %}
+            <option value="{{ marital }}">{{ marital }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Choose a Random Forest Model:</label>
+        <select name="model_choice">
+            {% for key in model_keys %}
+                <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+    <!--
+    {% for neighbor in neighbors %}
+    <tr>
+        <td>{{ neighbor.no }}</td>
+        <td>{{ neighbor.index }}</td>
+        <td>{{ neighbor.distance }}</td>
+        <td>{{ neighbor.label }}</td>
+    </tr>
+    {% endfor %}
+    -->
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h2>User Input:</h2>
+<ul>
+    {% for label, value in manual_input.items() %}
+        <li><strong>{{ label }}:</strong> {{ value }}</li>
+    {% endfor %}
+</ul>
+<p><strong>Hasil Prediksi (Depresi):</strong> {{ prediction }}</p>
+<p><strong>Hasil Probabilitas (Yes):</strong> {{ proba_yes }}</p>
+<p><strong>Hasil Probabilitas (No):</strong> {{ proba_no }}</p>
+<p><strong>Model yang digunakan:</strong> {{ model_choice }}</p>
+
+<!-- em -->

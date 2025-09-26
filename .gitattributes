@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Semua file teks pakai CRLF di lokal, LF di repo
+* text=auto eol=crlf
+
+# Pastikan file config Git ini tidak dipermasalahkan
+.gitattributes text eol=crlf
+
+# Format teks lainnya
+*.md text eol=crlf
+*.txt text eol=crlf
+*.csv text eol=crlf
+
+# File biner tidak diproses line ending-nya
+*.docx binary
+*.xlsx binary
+*.pdf binary
