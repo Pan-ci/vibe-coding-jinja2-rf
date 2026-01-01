@@ -1,4 +1,4 @@
-# Proyek Sederhana Klasifikasi Depresi dengan Jinja2, Pelatihan Model Random Forest dan Visualisasi Dataset CSV
+# Proyek Vibe Coding Sederhana Klasifikasi Depresi dengan Jinja2, Pelatihan Model Random Forest dan Visualisasi Dataset CSV
 
 ## 🚀 Fitur-Fitur
 
@@ -106,7 +106,7 @@ Skrip ini akan:
 - `Indeks Prestasi Kumulatif (IPK) vs Depresi.png`
 - `Jenis Kelamin vs Depresi.png`
 - `Jumlah Mahasiswa dengan Depresi.png`
-- `Rasion Mahasiswa Depresi.png`
+- `Rasio Mahasiswa Depresi.png`
 - `Status Pernikahan vs Depresi.png`
 - `Tahun Perkuliahan vs Depresi.png`
 - `Usia vs Depresi.png`
